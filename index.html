@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Details</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  </head>
+  <body>
+    
+    <nav class="nav">
+      <button type="button" class="nav-close" onclick="toggleNav()">
+        <ion-icon name="close-outline" size="large"></ion-icon>
+      </button>
+      <div class="nav-links-container">
+        <a href="index.html" class="nav__link">
+          <span class="nav__text">HOME</span>
+        </a>
+        <a href="details.php" class="nav__link">
+          <span class="nav__text">View Student Details</span>
+        </a>
+        <a href="#" class="nav__link">
+          <span class="nav__text">Edit Student Details</span>
+        </a>
+        <a href="#" class="nav__link">
+          <span class="nav__text">Remove Student Details</span>
+        </a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <button type="button" onclick="toggleNav()">
+        <ion-icon name="menu-outline" size="large"></ion-icon>
+      </button>
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h1>STUDENT DETAILS</h1>
+          </div>
+          <div class="panel-body"> 
+           
+            <form action="connect.php" method="post">
+              <div class="form-group">
+                <label for="studentName">Name of Student</label>
+                <input type="text" class="form-control" id="studentName" name="studentName"/>
+              </div>
+           
+              <div class="form-group">
+                <label for="parentName">Name of Parent</label>
+                <input  type="text" class="form-control" id="parentName" name="parentName" />
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <div>
+                  <label for="male" class="radio-inline">
+                    <input  type="radio" name="gender" value="m"  id="male"/>Male</label>
+                  <label for="female" class="radio-inline">
+                    <input type="radio" name="gender" value="f" id="female"/>Female</label>
+                  <label for="others" class="radio-inline">
+                    <input type="radio" name="gender" value="o" id="others"/>Others</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob"/>
+              </div>
+
+              <div class="form-group">
+                <label for="school">School Name</label>
+                 <select class="form-control" id="school"name="school">
+                   <option>City Montessori School</option>
+                   <option>The Awadh School</option>
+                   <option>Seth M.R. Jaipuria School</option>
+                   <option>SRM School</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="class">Class</label>
+                 <select class="form-control" id="class"name="class">
+                  <option>10</option>
+                  <option>12</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="section">Section</label>
+                 <select class="form-control" id="section"name="section">
+                  <option>A</option>
+                  <option>B</option>
+                </select>
+              </div>
+
+              <input type="submit" class="btn btn-primary" />
+            </form>
+          </div>
+          <div class="panel-footer text-right"> </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function toggleNav(){
+         document.body.classList.toggle("nav-open");
+      }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
